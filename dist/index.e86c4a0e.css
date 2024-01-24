@@ -1,0 +1,13 @@
+body {
+  background: #151515;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+#landing__container {
+  width: 100vw;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=index.e86c4a0e.css.map */

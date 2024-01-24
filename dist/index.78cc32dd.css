@@ -1,0 +1,14 @@
+body {
+  background: #151515;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow-y: hidden;
+}
+
+#landing__container, #cloud__container {
+  width: 100vw;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=index.78cc32dd.css.map */

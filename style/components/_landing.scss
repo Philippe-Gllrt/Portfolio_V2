@@ -1,0 +1,56 @@
+#landing__container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  position: relative;
+}
+
+#landing__paper_plane {
+  background-image: url(../../img/paper-plane.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 228px;
+  height: 101px;
+  position: fixed;
+  top: 50%;
+  left: 10%;
+  z-index: 7000;
+  // display: none;
+}
+
+#landing__wall {
+  background-image: url(../../img/landing-wall.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  width: 40vw;
+  z-index: 2000;
+  position: absolute;
+  bottom: 0%;
+  left: 5%;
+}
+
+#landing__wall_upper{
+  background-image: url(../../img/landing-wall-upper.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  width: 40vw;
+  z-index: 10000;
+  position: absolute;
+  bottom: 0%;
+  left: 5%;
+}
+
+#landing__text_container {
+  height: 100vh;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+}
+
+#landing__illustration_container {
+  height: 100vh;
+  width: 50vw;
+  position: relative;
+}

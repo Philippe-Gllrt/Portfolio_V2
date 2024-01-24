@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&family=Numans&family=Volkhov&display=swap');
+
+h1 {
+  font-family: "Fira Sans";
+  color: white;
+  font-size: 6em;
+}
+
+h2 {
+  font-family: "Volkhov";
+  color: white;
+  font-size: 3em;
+}
+
+p {
+  font-family: "Numans";
+  color: white;
+}
+
+a {
+  @extend p;
+  text-decoration: none;
+  margin-left: 1.5em;
+}

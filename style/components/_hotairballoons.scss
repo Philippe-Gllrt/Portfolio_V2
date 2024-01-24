@@ -1,0 +1,77 @@
+#hotAirBalloon__container {
+  height: 100vh;
+  width: 300vw;
+  position: relative;
+}
+
+#hotairballoons__hotAirBalloon {
+  position: absolute;
+  background-size: cover;
+  bottom: 0;
+}
+
+#hotairballoons__hotAirBalloon1 {
+  @extend #hotairballoons__hotAirBalloon;
+  background-image: url(../../img/hot-air-balloon-1.svg);
+  width: 30vw;
+  height: 40vw;
+  left: 5%;
+  translate: 0 -5%;
+}
+
+#hotairballoons__hotAirBalloon2 {
+  @extend #hotairballoons__hotAirBalloon;
+  background-image: url(../../img/hot-air-balloon-2.svg);
+  width: 15vw;
+  height: 20vw;
+  left: 35%;
+  translate: 0 -2%;
+}
+
+#hotairballoons__hotAirBalloon3 {
+  @extend #hotairballoons__hotAirBalloon;
+  background-image: url(../../img/hot-air-balloon-3.svg);
+  width: 25vw;
+  height: 30vw;
+  left: 75%;
+  translate: 0 -5%;
+}
+
+#hotairballoons__hotAirBalloon4 {
+  @extend #hotairballoons__hotAirBalloon;
+  background-image: url(../../img/hot-air-balloon-4.svg);
+  width: 40vw;
+  height: 50vw;
+  left: 50%;
+  translate: 0 40%;
+
+}
+
+#hotairballoons__hotAirBalloon5 {
+  @extend #hotairballoons__hotAirBalloon;
+  background-image: url(../../img/hot-air-balloon-5.svg);
+  width: 20vw;
+  height: 27vw;
+  left: 20%;
+  translate: 0 5%;
+}
+
+#hotairballoons__hotAirBalloon6 {
+  @extend #hotairballoons__hotAirBalloon;
+  background-image: url(../../img/hot-air-balloon-6.svg);
+  width: 20vw;
+  height: 27vw;
+  right: 5%;
+  translate: 0 5%;
+
+}
+
+#hotairballoons__hotAirBalloon7 {
+  @extend #hotairballoons__hotAirBalloon;
+  background-image: url(../../img/hot-air-balloon-7.svg);
+  width: 22vw;
+  height: 30vw;
+  left: 65%;
+  translate: 0 10%;
+
+}

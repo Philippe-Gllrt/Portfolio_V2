@@ -1,0 +1,1 @@
+{"mappings":"ACAA;;;;;;;ACAA","sources":["style/style.scss","style/components/_base.scss","style/components/_landing.scss"],"sourcesContent":["@import './components/base';\n@import './components/landing';\n",null,null],"names":[],"version":3,"file":"index.e86c4a0e.css.map","sourceRoot":"/__parcel_source_root/"}

@@ -1,0 +1,28 @@
+#city__container{
+  height: 100vh;
+  width: 300vw;
+  position: relative;
+}
+
+#city__cities {
+  position: absolute;
+  background-size: cover;
+  bottom: 10px;
+  left: 25vw;
+}
+
+#city__city1{
+  @extend #city__cities;
+  background-image: url(../../img/city-1.svg);
+  z-index: 3000;
+  width: 250vw;
+  height: 30vw;
+}
+
+#city__city2{
+  @extend #city__cities;
+  background-image: url(../../img/city-2.svg);
+  z-index: 4000;
+  width: 250vw;
+  height: 20vw;
+}
