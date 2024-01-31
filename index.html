@@ -6,34 +6,46 @@
     <title>Philippe Goulliart - Développeur Web Freelance</title>
     <link rel="stylesheet" href="./style/style.css" />
     <meta name="description" content="Je suis Philippe Goulliart, un développeur web freelance, autodidacte et super sympa."/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
   </head>
   <body>
     <nav id="navbar">
 
       <div>
-        <a href="https://www.linkedin.com/in/philippe-goulliart/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/Philippe-Gllrt" target="_blank">Github</a>
-        <a href="mailto:philippe.goulliart@protonmail.com" target="_blank">Email</a>
+        <a class='navbar__link' href="https://www.linkedin.com/in/philippe-goulliart/" target="_blank">LinkedIn</a>
+        <a class='navbar__link' href="https://github.com/Philippe-Gllrt" target="_blank">Github</a>
+        <a class='navbar__link' href="mailto:philippe.goulliart@protonmail.com" target="_blank">Email</a>
       </div>
 
     </nav>
 
+    <div id="landing__paper_plane_transform"><div id="landing__paper_plane"></div></div>
 
     <div id="wrapper">
       <section id="landing__container">
-        <div id="landing__paper_plane"></div>
         <div id="landing__illustration_container">
+          <!-- <div id="landing__paper_plane_transform"><div id="landing__paper_plane"></div></div> -->
           <div id="landing__wall_upper"></div>
           <div id="landing__wall"></div>
         </div>
         <div id="landing__text_container">
-          <h1>PHILIPPE<br/>GOULLIART<br/>DÉVELOPPEUR<br/>FREELANCE</h1>
+          <div id="landing__text_clip_path"><h1 id="landing__text">PHILIPPE</h1></div>
+          <div id="landing__text_clip_path"><h1 id="landing__text">GOULLIART</h1></div>
+          <div id="landing__text_clip_path"><h1 id="landing__text">DÉVELOPPEUR</h1></div>
+          <div id="landing__text_clip_path"><h1 id="landing__text">FREELANCE</h1></div>
+          <!-- <h1 id="landing__text">PHILIPPE</h1>
+          <h1 id="landing__text">GOULLIART</h1>
+          <h1 id="landing__text">DÉVELOPPEUR</h1>
+          <h1 id="landing__text">FREELANCE</h1> -->
         </div>
       </section>
 
       <section id="empty_section"></section>
 
-      <section id="cloud__container">
+      <section id="cloud__container" class="section__parallax">
         <div class="text__card">
           <p>
             Salut ! Je suis Philippe, un Web Developer Français, vivant actuellement en
@@ -50,7 +62,7 @@
 
       <section id="empty_section"></section>
 
-      <section id="city__container">
+      <section id="city__container" class="section__parallax">
         <div class="text__card">
           <p>
 
@@ -73,7 +85,7 @@
 
       <section id="empty_section"></section>
 
-      <section id="mountain__container">
+      <section id="mountain__container" class="section__parallax">
         <div class="text__card">
           <p>
 
@@ -94,7 +106,7 @@
 
       <section id="empty_section"></section>
 
-      <section id="hotAirBalloon__container">
+      <section id="hotAirBalloon__container" class="section__parallax">
         <div class="text__card">
           <p>
             Les outils que j'utilise <br/>HTML & CSS · Javascript · Ruby on Rails  · SCSS  · <u>Beaucoup de café</u>  · Parcel  · Wordpress · React <span class="text__minimise">(en progrès...)</span>
@@ -112,7 +124,10 @@
       <section id="empty_section"></section>
 
       <section id="contact__container">
-        <div id="contact__links_illustration"></div>
+        <div id="contact__links_illustration">
+          <div id="contact__lamp"></div>
+          <div id="contact__spotlight"></div>
+        </div>
         <div id="contact__links_container">
           <div>
             <a href="https://www.linkedin.com/in/philippe-goulliart/" target="_blank">// LinkedIn</a>
@@ -129,10 +144,13 @@
               parler !
             </p>
           </div>
+          <footer>
+            <p>©<span id="footer__year">2024</span> - Tout droits réservés</p>
+          </footer>
         </div>
       </section>
 
     </div>
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>

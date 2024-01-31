@@ -5,7 +5,8 @@
 }
 
 #clouds {
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
 }
 
@@ -15,7 +16,7 @@
   bottom: 0;
   left: 10%;
   translate: 0 18%;
-  width: 40vw;
+  width: 55vw;
   height: 20vw;
   z-index: 4000;
 }
@@ -26,7 +27,7 @@
   bottom: 0;
   left: 40%;
   translate: 0 40%;
-  width: 40vw;
+  width: 55vw;
   height: 20vw;
   z-index: 4000;
 }
@@ -37,7 +38,7 @@
   bottom: 0;
   right: 10%;
   translate: 0 20%;
-  width: 50vw;
+  width: 65vw;
   height: 20vw;
   z-index: 4000;
 }

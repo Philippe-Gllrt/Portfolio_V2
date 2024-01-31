@@ -1,11 +1,12 @@
 .text__card {
-  width: 80vw;
+  width: 25%;
   position: absolute;
   top: 15%;
   left: 10%;
-  // background-color: #151515c9;
-  // z-index: 7000;
-  // padding: .25em .5em;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  // p {
+  //   opacity: 0,
+  // }
 }
 
 .text__minimise {

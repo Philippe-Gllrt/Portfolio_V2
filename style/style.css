@@ -31,9 +31,36 @@ section {
   position: fixed;
   top: 50%;
   left: 10%;
+  animation: paperPlaneMoovement 4s linear infinite;
+}
+
+#landing__paper_plane_transform {
+  width: 228px;
+  height: 101px;
+  position: fixed;
+  top: 50%;
+  left: 10%;
+  transition: transform 0.3s;
   z-index: 7000;
 }
 
+@keyframes paperPlaneMoovement {
+  0% {
+    transform: translateY(0) rotateX(0) rotateZ(-2deg);
+  }
+  25% {
+    transform: translateY(-30px) rotateX(1deg) rotateZ(-5deg);
+  }
+  50% {
+    transform: rotateX(0) translateY(0) rotateZ(2deg);
+  }
+  75% {
+    transform: rotateX(-1deg) translateY(30px) rotateZ(5deg);
+  }
+  100% {
+    transform: rotateX(0) translateY(0) rotateZ(-2deg);
+  }
+}
 #landing__wall {
   background-image: url(../../img/landing-wall.svg);
   background-repeat: no-repeat;
@@ -62,13 +89,34 @@ section {
   height: 100vh;
   width: 50vw;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+#landing__text_container {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 #landing__illustration_container {
   height: 100vh;
   width: 50vw;
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+#landing__text {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  margin: 0;
+  padding: 0;
+}
+
+#landing__text_clip_path {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 #cloud__container {
@@ -78,7 +126,8 @@ section {
 }
 
 #clouds, #cloud__cloud6, #cloud__cloud5, #cloud__cloud4, #cloud__cloud3, #cloud__cloud2, #cloud__cloud1 {
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
 }
 
@@ -87,7 +136,7 @@ section {
   bottom: 0;
   left: 10%;
   translate: 0 18%;
-  width: 40vw;
+  width: 55vw;
   height: 20vw;
   z-index: 4000;
 }
@@ -97,7 +146,7 @@ section {
   bottom: 0;
   left: 40%;
   translate: 0 40%;
-  width: 40vw;
+  width: 55vw;
   height: 20vw;
   z-index: 4000;
 }
@@ -107,7 +156,7 @@ section {
   bottom: 0;
   right: 10%;
   translate: 0 20%;
-  width: 50vw;
+  width: 65vw;
   height: 20vw;
   z-index: 4000;
 }
@@ -315,10 +364,12 @@ a {
 }
 
 .text__card {
-  width: 80vw;
+  width: 25%;
   position: absolute;
   top: 15%;
   left: 10%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .text__minimise {
@@ -342,11 +393,13 @@ a {
   width: 100vw;
   display: flex;
   position: relative;
+  padding-right: 5em;
 }
 
 #contact__links_illustration {
   height: 100vh;
   width: 60vw;
+  position: relative;
 }
 
 #contact__links_container {
@@ -362,4 +415,40 @@ a {
 #contact__links_container a {
   text-decoration: none;
   margin: 0;
+}
+
+#contact__lamp {
+  background-image: url("../../img/contact-lamp.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 20vw;
+  width: 10vw;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+  z-index: 100000;
+}
+
+#contact__spotlight {
+  -webkit-clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
+  background: white;
+  mix-blend-mode: difference;
+  height: 100vh;
+  width: 30vw;
+  position: absolute;
+  top: 15vw;
+  left: 50%;
+  translate: -50% 0;
+  z-index: 8000;
+}
+
+footer {
+  position: absolute;
+  bottom: 2em;
+  right: 3em;
+}
+footer p, footer a {
+  font-size: 0.8em;
 }/*# sourceMappingURL=style.css.map */
