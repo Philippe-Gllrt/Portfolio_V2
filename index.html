@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Philippe Goulliart - Développeur Web Freelance</title>
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <meta name="description" content="Je suis Philippe Goulliart, un développeur web freelance, autodidacte et super sympa."/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script> -->
+
   </head>
   <body>
     <nav id="navbar">
@@ -22,12 +24,12 @@
 
     </nav>
 
-    <div id="landing__paper_plane_transform"><div id="landing__paper_plane"></div></div>
+    <!-- <div id="landing__paper_plane_transform"><div id="landing__paper_plane"></div></div> -->
 
     <div id="wrapper">
       <section id="landing__container">
         <div id="landing__illustration_container">
-          <!-- <div id="landing__paper_plane_transform"><div id="landing__paper_plane"></div></div> -->
+          <div id="landing__paper_plane_transform"><div id="landing__paper_plane"></div></div>
           <div id="landing__wall_upper"></div>
           <div id="landing__wall"></div>
         </div>
@@ -35,7 +37,7 @@
           <div id="landing__text_clip_path"><h1 id="landing__text">PHILIPPE</h1></div>
           <div id="landing__text_clip_path"><h1 id="landing__text">GOULLIART</h1></div>
           <div id="landing__text_clip_path"><h1 id="landing__text">DÉVELOPPEUR</h1></div>
-          <div id="landing__text_clip_path"><h1 id="landing__text">FREELANCE</h1></div>
+          <div id="landing__text_clip_path" class="landing__text_clip_path_last"><h1 id="landing__text">FREELANCE</h1></div>
           <!-- <h1 id="landing__text">PHILIPPE</h1>
           <h1 id="landing__text">GOULLIART</h1>
           <h1 id="landing__text">DÉVELOPPEUR</h1>
@@ -144,7 +146,7 @@
               parler !
             </p>
           </div>
-          <footer>
+          <footer id="footer">
             <p>©<span id="footer__year">2024</span> - Tout droits réservés</p>
           </footer>
         </div>

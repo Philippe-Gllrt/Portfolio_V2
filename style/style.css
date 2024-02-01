@@ -32,6 +32,7 @@ section {
   top: 50%;
   left: 10%;
   animation: paperPlaneMoovement 4s linear infinite;
+  transition: scale 0.2s;
 }
 
 #landing__paper_plane_transform {
@@ -40,7 +41,7 @@ section {
   position: fixed;
   top: 50%;
   left: 10%;
-  transition: transform 0.3s;
+  transition: transform 0.1s;
   z-index: 7000;
 }
 
@@ -65,7 +66,8 @@ section {
   background-image: url(../../img/landing-wall.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 90vh;
+  background-position: top right;
+  height: 80vh;
   width: 40vw;
   z-index: 2000;
   position: absolute;
@@ -77,7 +79,8 @@ section {
   background-image: url(../../img/landing-wall-upper.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 90vh;
+  background-position: top right;
+  height: 80vh;
   width: 40vw;
   z-index: 10000;
   position: absolute;
@@ -103,8 +106,6 @@ section {
   height: 100vh;
   width: 50vw;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 #landing__text {
@@ -138,7 +139,7 @@ section {
   translate: 0 18%;
   width: 55vw;
   height: 20vw;
-  z-index: 4000;
+  z-index: 8000;
 }
 
 #cloud__cloud2 {
@@ -148,7 +149,7 @@ section {
   translate: 0 40%;
   width: 55vw;
   height: 20vw;
-  z-index: 4000;
+  z-index: 8000;
 }
 
 #cloud__cloud3 {
@@ -158,7 +159,7 @@ section {
   translate: 0 20%;
   width: 65vw;
   height: 20vw;
-  z-index: 4000;
+  z-index: 8000;
 }
 
 #cloud__cloud4 {
@@ -217,7 +218,7 @@ section {
   height: 20vw;
   translate: 0 10%;
   left: 10%;
-  z-index: 6000;
+  z-index: 8000;
 }
 
 #mountain__mountain3 {
@@ -227,7 +228,7 @@ section {
   translate: 0 10%;
   width: 50vw;
   height: 20vw;
-  z-index: 6000;
+  z-index: 8000;
 }
 
 #mountain__mountain4 {
@@ -237,7 +238,7 @@ section {
   width: 70vw;
   height: 20vw;
   translate: 0 10%;
-  z-index: 6000;
+  z-index: 8000;
 }
 
 #hotAirBalloon__container {
@@ -336,7 +337,7 @@ section {
 
 #city__city2 {
   background-image: url(../../img/city-2.svg);
-  z-index: 4000;
+  z-index: 8000;
   width: 250vw;
   height: 20vw;
 }
@@ -451,4 +452,139 @@ footer {
 }
 footer p, footer a {
   font-size: 0.8em;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h2, #contact__links_container a {
+    font-size: 1.5em;
+  }
+  #landing__illustration_container {
+    width: 0;
+  }
+  #landing__text_container {
+    width: 100vw;
+    align-items: center;
+  }
+  .landing__text_clip_path_last {
+    margin-bottom: 15em;
+  }
+  #landing__wall {
+    display: none;
+  }
+  #landing__wall_upper {
+    display: none;
+  }
+  #landing__paper_plane {
+    width: 160px;
+    height: 70px;
+  }
+  #contact__lamp {
+    height: 40vw;
+    width: 20vw;
+  }
+  #contact__spotlight {
+    top: 30vw;
+    width: 45vw;
+  }
+  #contact__links_container p, #contact__links_container a {
+    margin: 0 0 0 1em;
+  }
+  #contact__links_container a {
+    margin: 0;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 3em;
+  }
+  h2, #contact__links_container a {
+    font-size: 1.5em;
+  }
+  #landing__wall {
+    left: 0%;
+  }
+  #landing__wall_upper {
+    left: 0%;
+  }
+  #landing__paper_plane {
+    width: 160px;
+    height: 70px;
+  }
+  #contact__lamp {
+    height: 40vw;
+    width: 20vw;
+  }
+  #contact__spotlight {
+    top: 30vw;
+    width: 45vw;
+  }
+  #contact__links_container p, #contact__links_container a {
+    margin: 0 0 0 1em;
+  }
+  #contact__links_container a {
+    margin: 0;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 3em;
+  }
+  h2, #contact__links_container a {
+    font-size: 2em;
+  }
+  #contact__lamp {
+    height: 40vw;
+    width: 20vw;
+  }
+  #contact__spotlight {
+    top: 30vw;
+    width: 45vw;
+  }
+  #contact__links_container p, #contact__links_container a {
+    margin: 0 0 0 3em;
+  }
+  #contact__links_container a {
+    margin: 0;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 5em;
+  }
+  h2, #contact__links_container a {
+    font-size: 3em;
+  }
+  #landing__wall {
+    left: 5%;
+    height: 90vh;
+  }
+  #landing__wall_upper {
+    left: 5%;
+    height: 90vh;
+  }
+  #landing__paper_plane {
+    width: 228px;
+    height: 101px;
+  }
+  #contact__lamp {
+    height: 20vw;
+    width: 10vw;
+  }
+  #contact__spotlight {
+    top: 15vw;
+    width: 30vw;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 6em;
+  }
 }/*# sourceMappingURL=style.css.map */

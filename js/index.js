@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const landingTexts = gsap.utils.toArray("#landing__text");
   const navBarLinks = gsap.utils.toArray(".navbar__link");
 
+  let paperPlaneScrolling = window.innerWidth * (1906/100);
+  // console.log(paperPlaneScrolling);
 
   //create fade in of the landing page
   gsap.from(navBarLinks, {
@@ -53,9 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
     xPercent: -1906,
   });
 
-  // tl.to("#landing__paper_plane_transform", {
-  //   xPercent: 19006,
-  // }, 0);
+  tl.to("#landing__paper_plane_transform", {
+    x: paperPlaneScrolling,
+  }, 0);
 
   sections.forEach((stop, index) => {
     tl.from(stop.querySelector("p"), {
@@ -258,8 +260,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "#landing__paper_plane_transform"
   );
 
-
-  paperPlaneTransform.style.transform = "rotateY(0deg)";
+  //set paperPlan transform
+  paperPlane.style.scale = "1 1";
   //Flip paper plan to fit the direction of the moovement
   window.addEventListener(
     "scroll",
@@ -268,28 +270,20 @@ document.addEventListener("DOMContentLoaded", () => {
       if (currentScroll > lastScrollTop) {
         // user is scrolling down
 
-        var transform = window
-          .getComputedStyle(paperPlaneTransform)
-          .getPropertyValue("transform");
-        if (transform && transform.indexOf("rotateY(0deg)") !== 0) {
-          paperPlaneTransform.style.transform =
-            paperPlaneTransform.style.transform.replace(
-              /rotateY\([^)]*\)/,
-              "rotateY(0deg)"
-            );
-        }
+        // var transform = window
+        //   .getComputedStyle(paperPlaneTransform)
+        //   .getPropertyValue("transform");
+        // if (transform && transform.indexOf("rotateY(0deg)") !== 0) {
+        //   paperPlaneTransform.style.transform =
+        //     paperPlaneTransform.style.transform.replace(
+        //       /rotateY\([^)]*\)/,
+        //       "rotateY(0deg)"
+        //     );
+        // }
+
+        paperPlane.style.scale = '1 1'
       } else {
-        var transform = window
-          .getComputedStyle(paperPlaneTransform)
-          .getPropertyValue("transform");
-        if (transform && transform.indexOf("rotateY(180deg)") !== 0) {
-          console.log(paperPlaneTransform.style.transform);
-          paperPlaneTransform.style.transform =
-            paperPlaneTransform.style.transform.replace(
-              /rotateY\([^)]*\)/,
-              "rotateY(180deg)"
-            );
-        }
+        paperPlane.style.scale = '-1 1'
       }
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pour gérer les bords
     },
