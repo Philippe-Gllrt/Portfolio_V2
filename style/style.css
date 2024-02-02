@@ -3,12 +3,17 @@ body {
   margin: 0;
   padding: 0;
   background: #151515;
-  overflow-y: hidden;
+}
+
+html {
+  scrollbar-width: none;
 }
 
 #wrapper {
   display: flex;
   flex-direction: row;
+  margin: 0;
+  padding: 0;
 }
 
 section {
@@ -241,6 +246,10 @@ section {
   z-index: 8000;
 }
 
+#mountains__text {
+  width: 20%;
+}
+
 #hotAirBalloon__container {
   height: 100vh;
   width: 300vw;
@@ -361,7 +370,6 @@ p, a {
 
 a {
   text-decoration: none;
-  margin-left: 1.5em;
 }
 
 .text__card {
@@ -381,12 +389,17 @@ a {
   position: fixed;
   top: 0;
   right: 0;
-  width: 100vw;
+  width: 100%;
   height: 3rem;
   color: white;
   z-index: 1000000;
   text-align: end;
   padding: 0.8em 3em;
+}
+#navbar p, #navbar a {
+  margin-left: 1.5em;
+  display: inline-block;
+  cursor: pointer;
 }
 
 #contact__container {

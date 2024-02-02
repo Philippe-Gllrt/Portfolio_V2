@@ -4,17 +4,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = gsap.utils.toArray(".section__parallax");
   const landingTexts = gsap.utils.toArray("#landing__text");
   const navBarLinks = gsap.utils.toArray(".navbar__link");
+  const paperPlaneTransform = document.querySelector(
+    "#landing__paper_plane_transform"
+  );
 
-  let paperPlaneScrolling = window.innerWidth * (1906/100);
-  // console.log(paperPlaneScrolling);
+  let scrollLength = 0;
+  (document.querySelectorAll('section')).forEach((element) => {
+    scrollLength += element.offsetWidth;
+  })
+  // scrollLength += 323;
 
-  //create fade in of the landing page
+  let paperPlaneScrolling = document.documentElement.clientWidth * (1905/100);
+
+
+  ////create fade in of the landing page
   gsap.from(navBarLinks, {
     opacity: 0,
     stagger: 0.2,
     duration: 0.5,
     delay: 1,
   });
+
+  gsap.from('#landing__paper_plane_transform',{
+    opacity: 0,
+    delay: 1.2,
+    duration: 1,
+    // scrub: true
+  })
 
   gsap.from(landingTexts, {
     yPercent: 200,
@@ -33,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     yPercent: 200,
     duration: 1,
   });
-
+  ////end of creating fade in of the landing page
 
   //create the animation timeline
   let tl = gsap.timeline({
@@ -44,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
       trigger: slider,
       pin: true,
       scrub: true,
-      end: 15000,
+      end: () => "+=" + scrollLength,
     },
   });
 
@@ -52,13 +68,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //create the horizontal scroll
   tl.to(slider, {
-    xPercent: -1906,
+    xPercent: -1905.5
   });
 
+  //make paperPlane stay in scroll
   tl.to("#landing__paper_plane_transform", {
     x: paperPlaneScrolling,
   }, 0);
 
+  //implementing face in effect in each section
   sections.forEach((stop, index) => {
     tl.from(stop.querySelector("p"), {
       opacity: 0,
@@ -96,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+  ////Create parallax effect
   tl.to('#cloud__cloud1', {
     xPercent: -30,
     scrollTrigger: {
@@ -256,9 +275,6 @@ document.addEventListener("DOMContentLoaded", () => {
   requestAnimationFrame(raf);
 
   let lastScrollTop = 0;
-  const paperPlaneTransform = document.querySelector(
-    "#landing__paper_plane_transform"
-  );
 
   //set paperPlan transform
   paperPlane.style.scale = "1 1";
@@ -289,4 +305,31 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     false
   );
+
+
+
 });
+
+let nav_tl = gsap.timeline();
+
+function scrollToContact(e) {
+  e.preventDefault();
+  const contactContainerPosition = document.documentElement.clientWidth * 20.05;
+  nav_tl.to(window, { duration: 2.5, scrollTo: contactContainerPosition });
+}
+
+function scrollToOffer(e) {
+  e.preventDefault();
+  const contactContainerPosition = document.documentElement.clientWidth * 11.05;
+  nav_tl.to(window, { duration: 2.5, scrollTo: contactContainerPosition });
+}
+
+function scrollToAbout(e) {
+  e.preventDefault();
+  const contactContainerPosition = document.documentElement.clientWidth * 7.05;
+  nav_tl.to(window, { duration: 2.5, scrollTo: contactContainerPosition });
+}
+
+document.querySelector('#navbar__link_about').addEventListener("click", scrollToAbout)
+document.querySelector('#navbar__link_offer').addEventListener("click", scrollToOffer)
+document.querySelector('#navbar__link_contact').addEventListener("click", scrollToContact)
